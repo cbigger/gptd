@@ -2,7 +2,7 @@
 
 INSTALL_DIR="/usr/local/lib/gpt.d"
 SERVICE_FILE="/lib/systemd/system/gptd.service"
-CONFIGURATION_DIR="/etc/gpt.d/"
+CONFIGURATION_DIR="/etc/gpt.d"
 
 
 # Create the installation directories
@@ -20,6 +20,8 @@ cat << EOF >  $CONFIGURATION_DIR/.env
 OPENAI_API_KEY=<YOUR_API_KEY_HERE>
 EOF
 
+# Copy the .env to the simpleaichat directory 
+# cp $CONFIGURATION_DIR/.env
 # Create the gptd.service file
 cat << EOF > $SERVICE_FILE
 [Unit]

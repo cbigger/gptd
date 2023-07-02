@@ -16,7 +16,7 @@ def logout(string):
 
 
 try:
-    config_file = "etc/gpt.d/.env"
+    config_file = "/etc/gpt.d/.env"
     load_dotenv(dotenv_path=config_file)
 except FileNotFound:
     logout("Configuration file not found. Please update your configuration in /etc/gpt.d/gptd.conf")
@@ -47,6 +47,10 @@ class ChatHandler(socketserver.BaseRequestHandler):
                 break
 
 
+class ThreadedTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    daemon_threads = True
+    allow_reuse_address = True
+
 def run_server(character=None, character_command=None, prime=True, model="gpt-3.5-turbo-0613"):
 
 #    assert gpt_api_key, "An API key was not defined."
@@ -55,17 +59,20 @@ def run_server(character=None, character_command=None, prime=True, model="gpt-3.
    # Create the server, binding to localhost on port 9999
 
     with socketserver.ThreadingTCPServer(("localhost", 9999), ChatHandler) as server:
+        server.timeout = 1
         server.chat_instance = chat_instance
         logout("Starting server...")
-        # Activate the server; this will keep running until you
-        # interrupt the program with Ctrl-C
-        print("Starting server... press Ctrl-C to stop.")
+
+
+
         try:
-            server.serve_forever()
+            while True:
+                server.handle_request()
         except KeyboardInterrupt:
             logout("\nShutting down server...")
             server.shutdown()
-#        response = server.chat_instance(
+            server.server_close()
+
 
 if __name__ == "__main__":
     run_server()
