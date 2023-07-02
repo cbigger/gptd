@@ -3,10 +3,9 @@ A systemd daemonization of the cli implementation of https://github.com/minimaxi
 
 The current gptd runs a tcp/ip server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
 
-This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, and a .deb.
+This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
 
 You can run the python script directly in a terminal for debugging client interactions. STDERR is logged via python.  
-
 
 
 ### Getting Started
@@ -25,14 +24,23 @@ A python requirements.txt file is included
 Please note that this software **requires pydantic version 1.10.7**.
 
 
-### Installing
+### Basic python console server
 
-Method 1
+
 Clone this repository to your local machine:
 
 `git clone https://github.com/cbigger/gptd.git`
 
+`cd gptd/`
+
+
 Install the python dependancies:
 
-`pip install -r requirements.txt`
+`pip install -r gptd/usr/local/lib/gpt.d/requirements.txt`
 
+
+Add your API key to the configuration file located in the /src directory, and
+
+Run the server:
+
+`python src/gptd.py`
