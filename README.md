@@ -1,4 +1,4 @@
-# **gptd**
+### **gptd**
 A systemd daemonization of the cli implementation of https://github.com/minimaxir/simpleaichat and the openai API. 
 The current alpha gptd runs a tcp/ip server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
 
