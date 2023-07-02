@@ -7,11 +7,9 @@ The current gptd runs a TCP/IP server which forwards all incoming data to a sing
 This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
 
 You can run the python script directly in a terminal for debugging client interactions. STDERR is logged via python.  
-
 <br />
 <br />
 <br />
-
 ### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
@@ -75,13 +73,11 @@ If you want it spin up at starttime, use this:
 
 **IF THE SERVICE FAILS** it is most likely because you started the service before adding your api key to the .env. You can edit the file after install at /etc/gpt.d/.env, or make the directory and .env file prior to installing with the .deb.  
 The service will not restart if it fails, and must be started manually. You can change this by editing the service file:
-```
-[Service]
-...
-Restart=always
-```
 
-<br />
+    [Service]
+
+    Restart=always
+
 <br />
 <br />
 
@@ -94,11 +90,9 @@ and install with
 `sudo dpkg -i /path/to/your/gptd.deb`
 
 You can also create your own unit and configuration files manually. Follow the packaging instructions in gptd/DEBIAN/postinst, and place everything in the proper directories according to that file. Then enable/start the service and you are good to go!
-
 <br />
 <br />
 <br />
-
 ## Interacting with the server
 
 It's a simple TCP/IP server. You can open a connection with any console data client. Like netcat! 
