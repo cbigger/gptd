@@ -44,3 +44,20 @@ Add your API key to the configuration file located in the /src directory, and
 Run the server:
 
 `python src/gptd.py`
+
+
+### Install the gptd daemon from the .deb
+
+Clone the repository like in the previous paragraph, or download from the versions tab. 
+The .deb file is created with and has been tested on an up-to-date debian 11 buster system, but should work on any modern debian distro. 
+You can use it to install gptd from within the containing directory with the following command:
+
+`sudo dpkg -i ./gptd.deb` 
+
+Installing this way will start the gptd service with default file locations per gptd/DEBIAN/postinst:
+
+`INSTALL_DIR="/usr/local/lib/gpt.d"`
+
+`SERVICE_FILE="/lib/systemd/system/gptd.service"`
+
+`CONFIGURATION_DIR="/etc/gpt.d"`
