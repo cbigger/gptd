@@ -16,7 +16,7 @@ def logout(string):
 
 
 try:
-    config_file = "/etc/gpt.d/.env"
+    config_file = "./gptd.conf"
     load_dotenv(dotenv_path=config_file)
 except FileNotFound:
     logout("Configuration file not found. Please update your configuration in /etc/gpt.d/gptd.conf")
@@ -24,11 +24,9 @@ except FileNotFound:
 
 gpt_api_key = os.getenv("OPENAI_API_KEY")
 
-ai_text_colour = '\033[34m\033[1m' 
-ai_name_colour = '\033[34m\033[1m\033[47m'
-text_reset = '\033[0m'
-
-
+ai_text_colour = os.getenv("AI_TEXT_COLOUR") #'\033[34m\033[1m'
+ai_name_colour = os.getenv("AI_NAME_COLOUR") #'\033[34m\033[1m\033[47m'
+text_reset = os.getenv("TEXT_RESET") #'\033[0m'
 
 class ChatHandler(socketserver.BaseRequestHandler):
     def handle(self):
