@@ -87,4 +87,31 @@ Restart=always
 
 ### Manual .deb or systemd installation
 
-You can edit the files under DEBIAN to customize your install directories
+You can edit the files under DEBIAN to customimize your .deb creation. the DEBIAN/postinst file creates the configuration file and the systemd unit file, making it a great place for pre-configuration. Once you're happy, package the files with
+
+`dpkg-deb --build gptd`
+and install with
+`sudo dpkg -i /path/to/your/gptd.deb`
+
+You can also create your own unit and configuration files manually. Follow the packaging instructions in gptd/DEBIAN/postinst, and place everything in the proper directories according to that file. Then enable/start the service and you are good to go!
+
+<br />
+<br />
+<br />
+
+## Interacting with the server
+
+It's a simple TCP/IP server. You can open a connection with any console data client. Like netcat! 
+Open up a secondary terminal (or emulator window) and type
+
+`nc localhost 9999`
+
+Type something and hit enter to start chatting!
+
+gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to.
+
+Features to come:
+   Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do
+   Broadcast channels, like an RRS feed but for llm activity
+   Unix Domain Sockets implementation
+   Distro-independent daemon install?
