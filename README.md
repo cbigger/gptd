@@ -46,6 +46,7 @@ Run the server:
 `python src/gptd.py`
 
 
+
 ### Install the gptd daemon from the .deb
 
 Clone the repository like in the previous paragraph, or download from the versions tab. 
@@ -54,8 +55,16 @@ You can use it to install gptd from within the containing directory with the fol
 
 `sudo dpkg -i ./gptd.deb` 
 
-Installing this way will start the gptd service with default file locations per gptd/DEBIAN/postinst:
+Installing this way will start (but not enable) the gptd service with default file locations per gptd/DEBIAN/postinst:
 
     INSTALL_DIR="/usr/local/lib/gpt.d"
     SERVICE_FILE="/lib/systemd/system/gptd.service"
     CONFIGURATION_DIR="/etc/gpt.d"
+
+The service will not restart if it fails, and must be started manually. You can change this by editing the service file:
+```
+[Service]
+...
+Restart=always
+
+```
