@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Define the location of your systemd service file
+SERVICE_FILE="/lib/systemd/system/gptd.service"
+
+# Stop the service
+systemctl stop gptd
+
+# Disable the service so it doesn't start on boot
+systemctl disable gptd
+
+# Remove the service file
+rm $SERVICE_FILE
+
+# Reload the systemd daemon to recognize the changes
+systemctl daemon-reload
+systemctl reset-failed

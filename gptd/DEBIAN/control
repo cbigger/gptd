@@ -1,0 +1,9 @@
+Package: gptd
+Version: 0.1
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 2368  
+Maintainer: <gptddev@gmail.com>
+Description: gptd is a tcp/ip server connecting to the openai api.
