@@ -1,18 +1,27 @@
 # gptd
-A systemd daemonization of the openai API. 
-An AI chat daemon, providing an interface for interactive chats with any OpenAI API available models (default: GPT-3.5-turbo).
+A systemd daemonization of the cli implementation of https://github.com/minimaxir/simpleaichat and the openai API. 
+The current alpha gptd runs a tcp/ip server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: GPT-3.5-turb).
 
-This project includes the Python scripts required for the chat service, a TCP/IP server for client interaction, and a systemd service file for running the service as a daemon on Debian-based Linux systems.
+This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, and a .deb.
+
+You can run the python script directly in a terminal for debugging client interactions. STDERR is logged via python.  
+
+
+
 Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
 Prerequisites
 
     Python 3.7+
-    Debian 11 or similar Linux distribution
-    Conda environment (recommended for managing Python dependencies)
+    Any Linux distribution should work, .deb is for debian-based distros obviously
+    Conda or virtual environment (recommended for managing Python dependencies)
     An OpenAI API key (Note: keep your key secure and don't expose it publicly)
+    
 
 Installing
 
+Method 1:
 Clone this repository to your local machine
+`git clone https://github.com/cbigger/gptd.git`
+
