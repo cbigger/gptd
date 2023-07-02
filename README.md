@@ -17,11 +17,18 @@ Prerequisites
     Any Linux distribution should work, .deb is for debian-based distros obviously
     Conda or virtual environment (recommended for managing Python dependencies)
     An OpenAI API key (Note: keep your key secure and don't expose it publicly)
-    
+
+A python requirements.txt file is included
+Please note that this software **requires pydantic version 1.10.7**.
 
 Installing
 
-Method 1:
-Clone this repository to your local machine
+Method 1
+Clone this repository to your local machine:
+
 `git clone https://github.com/cbigger/gptd.git`
+
+Install the python dependancies:
+
+`pip install -r requirements.txt`
 
