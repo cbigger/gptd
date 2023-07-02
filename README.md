@@ -12,6 +12,7 @@ You can run the python script directly in a terminal for debugging client intera
 ### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
+
 Prerequisites
 
     Python 3.7+
@@ -20,6 +21,7 @@ Prerequisites
     An OpenAI API key (Note: keep your key secure and don't expose it publicly)
 
 A python requirements.txt file is included
+
 Please note that this software **requires pydantic version 1.10.7**.
 
 
