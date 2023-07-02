@@ -47,6 +47,12 @@ Run the server:
 
 
 
+
+
+
+
+
+
 ### Install the gptd daemon from the .deb
 
 Clone the repository like in the previous paragraph, or download from the versions tab. 
