@@ -24,7 +24,7 @@ A python requirements.txt file is included
 Please note that this software **requires pydantic version 1.10.7**.
 
 
-### Basic python console server
+### Install the basic python console server
 
 
 Clone this repository to your local machine:
