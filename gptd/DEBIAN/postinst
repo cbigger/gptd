@@ -49,6 +49,3 @@ EOF
 
 # Reload the systemd daemon to recognize the new service
 systemctl daemon-reload
-
-# Enable the service so it starts on boot
-systemctl start gptd
