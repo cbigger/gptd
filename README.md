@@ -54,7 +54,7 @@ Run the server:
 ### Install the gptd daemon from the .deb
 
 Clone the repository like in the previous paragraph, or download from the versions tab. 
-The .deb file is created with and has been tested on an up-to-date debian 11 buster system, but should work on any modern debian distro. 
+The .deb file is created with and has been tested on an up-to-date debian 11 bullseye system, but should work on any modern debian distro. 
 You can use it to install gptd from within the containing directory with the following command:
 
 `sudo dpkg -i ./gptd.deb` 
