@@ -56,8 +56,6 @@ You can use it to install gptd from within the containing directory with the fol
 
 Installing this way will start the gptd service with default file locations per gptd/DEBIAN/postinst:
 
-`INSTALL_DIR="/usr/local/lib/gpt.d"`
-
-`SERVICE_FILE="/lib/systemd/system/gptd.service"`
-
-`CONFIGURATION_DIR="/etc/gpt.d"`
+    INSTALL_DIR="/usr/local/lib/gpt.d"
+    SERVICE_FILE="/lib/systemd/system/gptd.service"
+    CONFIGURATION_DIR="/etc/gpt.d"
