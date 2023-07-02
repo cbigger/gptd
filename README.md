@@ -2,7 +2,7 @@
 ### Overview
 A systemd daemonization of the cli implementation of https://github.com/minimaxir/simpleaichat and the openai API. 
 
-The current gptd runs a tcp/ip server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
+The current gptd runs a TCP/IP server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
 
 This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
 
