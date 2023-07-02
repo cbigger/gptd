@@ -110,8 +110,8 @@ Type something and hit enter to start chatting!
 
 gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to.
 
-Features to come:
-   Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do
-   Broadcast channels, like an RRS feed but for llm activity
-   Unix Domain Sockets implementation
-   Distro-independent daemon install?
+Features to come:\
+   Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do\
+   Broadcast channels, like an RRS feed but for llm activity\
+   Unix Domain Sockets implementation\
+   Distro-independent daemon install?\
