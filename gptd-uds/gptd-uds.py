@@ -41,7 +41,6 @@ class ChatHandler(socketserver.BaseRequestHandler):
                 logout(f"Received from {self.client_address}: {data}")
                 # Send data to the AIChat instance
                 response = f"{ai_name_colour}ChatGPT:{text_reset}{ai_text_colour} "
-                print(response)
                 response += self.server.chat_instance(data)
                 # Send response back to the client
                 response += (text_reset + '\n')
