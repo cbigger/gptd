@@ -24,10 +24,9 @@ except FileNotFound:
 
 gpt_api_key = os.getenv("OPENAI_API_KEY")
 
-ai_text_colour = os.getenv("AI_TEXT_COLOUR") #'\033[34m\033[1m'
-ai_name_colour = os.getenv("AI_NAME_COLOUR") #'\033[34m\033[1m\033[47m'
-text_reset = os.getenv("TEXT_RESET") #'\033[0m'
-
+ai_text_colour = codecs.decode(os.getenv("AI_TEXT_COLOUR"), 'unicode_escape')
+ai_name_colour = codecs.decode(os.getenv("AI_NAME_COLOUR"), 'unicode_escape')
+text_reset = codecs.decode(os.getenv("TEXT_RESET"), 'unicode_escape')
 
 
 class ChatHandler(socketserver.BaseRequestHandler):
