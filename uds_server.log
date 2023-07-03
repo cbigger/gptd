@@ -73,3 +73,18 @@ Shutting down server...
 2023-07-03 01:28:27,149:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2023-07-03 01:28:39,630:INFO:Received from : command to reset all images
 2023-07-03 01:28:40,429:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:42:36,337:INFO:
+Shutting down server...
+2023-07-03 01:42:38,461:INFO:Starting server...
+2023-07-03 01:43:05,484:INFO:Received from : where is tansania
+2023-07-03 01:43:11,455:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:43:30,117:INFO:Received from : what is it like there?
+2023-07-03 01:43:31,377:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:47:00,283:INFO:Received from : that sounds pretty exciting
+2023-07-03 01:47:01,314:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:47:03,882:INFO:Received from : what are the dangers?
+2023-07-03 01:47:04,266:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:47:16,407:INFO:Received from : hmm
+2023-07-03 01:47:18,788:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:47:31,796:INFO:Received from : i dont love violent coups
+2023-07-03 01:47:32,745:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
