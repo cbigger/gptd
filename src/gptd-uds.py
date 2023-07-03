@@ -16,7 +16,7 @@ def logout(string):
 
 
 try:
-    config_file = "/etc/gpt.d/.env"
+    config_file = "./gptd.conf"
     load_dotenv(dotenv_path=config_file)
 except FileNotFoundError:
     logout("Configuration file not found. Please update your configuration in /etc/gpt.d/gptd.conf")
