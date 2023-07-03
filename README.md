@@ -109,8 +109,8 @@ gptd is meant to be used as a tool for further terminal and desktop environment 
 
 Features to come:\
 
-    v1 has a lot of QoL on the way, and further customization. v1.1 is likely to be DBus and desktop env integration
-    Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do\
-    Broadcast channels, again DBus program interface
-    Unix Domain Sockets implementation  **DONE**\
-    Distro-independent daemon install?\
+   - v1 has a lot of QoL on the way, and further customization. v1.1 is likely to be DBus and desktop env integration
+   - Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do\
+   - Broadcast channels, again DBus program interface
+   - Unix Domain Sockets implementation  **DONE**\
+   - Distro-independent daemon install?\
