@@ -1,0 +1,75 @@
+2023-07-03 00:40:51,303:INFO:Starting server...
+2023-07-03 00:41:18,272:INFO:Received from : dd
+2023-07-03 00:42:40,261:INFO:
+Shutting down server...
+2023-07-03 00:42:42,346:INFO:Starting server...
+2023-07-03 00:42:47,936:INFO:Received from : ddf
+2023-07-03 00:42:49,452:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:44:18,038:INFO:Received from : Hello
+2023-07-03 00:44:18,837:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:47:31,268:INFO:Received from : goooggda
+2023-07-03 00:47:33,352:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:47:57,185:INFO:Received from : Hello gpt
+2023-07-03 00:47:58,453:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:53:36,483:INFO:
+Shutting down server...
+2023-07-03 00:53:41,711:INFO:Starting server...
+2023-07-03 00:53:55,137:INFO:Received from : hello
+2023-07-03 00:53:56,091:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:54:18,134:INFO:
+Shutting down server...
+2023-07-03 00:54:20,508:INFO:Starting server...
+2023-07-03 00:54:28,427:INFO:Received from : hello
+2023-07-03 00:54:29,420:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 00:55:04,087:INFO:
+Shutting down server...
+2023-07-03 00:55:06,913:INFO:Starting server...
+2023-07-03 00:55:12,470:INFO:Received from : hllllo
+2023-07-03 00:55:13,350:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:04:12,799:INFO:
+Shutting down server...
+2023-07-03 01:04:15,149:INFO:Starting server...
+2023-07-03 01:04:21,904:INFO:Received from : gooddda
+2023-07-03 01:04:22,484:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:11:59,208:INFO:
+Shutting down server...
+2023-07-03 01:12:01,200:INFO:Starting server...
+2023-07-03 01:12:07,471:INFO:Received from : hlooo
+2023-07-03 01:12:08,473:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:15:09,902:INFO:
+Shutting down server...
+2023-07-03 01:15:12,816:INFO:Starting server...
+2023-07-03 01:15:20,195:INFO:Received from : hello
+2023-07-03 01:15:21,197:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:15:30,880:INFO:Received from : I was wondering if your streaming feature was working
+2023-07-03 01:15:31,848:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:17:12,703:INFO:Received from : well you see, you are though
+2023-07-03 01:17:13,327:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:18:58,406:INFO:Received from : welllll
+2023-07-03 01:18:59,316:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:19:15,098:INFO:Received from : ddd
+2023-07-03 01:19:16,151:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:20:45,414:INFO:
+Shutting down server...
+2023-07-03 01:20:49,010:INFO:Starting server...
+2023-07-03 01:20:54,382:INFO:Received from : leeeee
+2023-07-03 01:20:55,409:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:21:02,945:INFO:Received from : i need more assistance
+2023-07-03 01:21:03,942:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:21:14,549:INFO:Received from : basically, i want you to start streaming token by toekn
+2023-07-03 01:21:15,577:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:25:27,605:INFO:Received from : gddd
+2023-07-03 01:25:28,656:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:25:37,384:INFO:Received from : Don't worry about it
+2023-07-03 01:25:38,184:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:27:16,087:INFO:
+Shutting down server...
+2023-07-03 01:27:21,629:INFO:Starting server...
+2023-07-03 01:27:36,943:INFO:Received from : Hello there!
+2023-07-03 01:27:37,893:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:28:15,144:INFO:Received from : Are you still there?
+2023-07-03 01:28:16,088:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:28:26,412:INFO:Received from : Looking to get some assistance with my docker instance
+2023-07-03 01:28:27,149:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-07-03 01:28:39,630:INFO:Received from : command to reset all images
+2023-07-03 01:28:40,429:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

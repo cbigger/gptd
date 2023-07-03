@@ -41,10 +41,17 @@ class ChatHandler(socketserver.BaseRequestHandler):
                 logout(f"Received from {self.client_address}: {data}")
                 # Send data to the AIChat instance
                 response = f"{ai_name_colour}ChatGPT:{text_reset}{ai_text_colour} "
-                print(response)
-                response += self.server.chat_instance(data)
+                self.request.sendall(response.encode('utf-8'))
+                last_answer = ""
+                answer = ""
+                for chunk in self.server.chat_instance.stream(data):
+                    answer = chunk['response']
+                    bit_answer = answer.replace(last_answer, "")
+                    print(bit_answer)
+                    self.request.sendall(bit_answer.encode('utf-8'))
+                    last_answer=answer
                 # Send response back to the client
-                response += (text_reset + '\n')
+                response = (text_reset + "\n")
                 self.request.sendall(response.encode('utf-8'))
 
             else:
@@ -56,8 +63,6 @@ class ThreadedUnixServer(socketserver.ThreadingMixIn, socketserver.UnixStreamSer
     allow_reuse_address = True
 
 def run_server(character=None, character_command=None, prime=True, model="gpt-3.5-turbo"):
-
-#    assert gpt_api_key, "An API key was not defined."
     chat_instance = simpleaichat.AIChat(console=False, character=character, character_command=character_command, prime=prime, api_key=gpt_api_key)
 
     # Create the server, binding to localhost on port 9999
