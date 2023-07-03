@@ -2,9 +2,9 @@
 ### Overview
 A systemd daemonization of the cli implementation of https://github.com/minimaxir/simpleaichat and the openai API. 
 
-The current gptd runs a TCP/IP server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
+The current gptd_v1.0.0 opens a unix domain socker server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
 
-This project includes the Python script(s) required for the continuous chat TCP/IP server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
+This project includes the Python script(s) required for the continuous chat server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
 
 You can run the python script directly in a terminal for debugging client interactions. STDERR is logged via python.  
 <br />
@@ -45,10 +45,12 @@ Add your API key to the configuration file located in the /src directory, and
 
 Run the server:
 
-`python src/gptd.py`
-<br />
-<br />
-<br />
+`python src/gptd-uds.py`
+Run the client:
+`python src/gptd-uds-client.py`
+<br /
+    >
+
 ### Install the gptd daemon from the .deb
 
 Clone the repository like in the previous paragraph, or download from the versions tab. 
