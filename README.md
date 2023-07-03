@@ -6,6 +6,8 @@ The current gptd_v1.0.0 opens a unix domain socker server which forwards all inc
 
 This project includes the Python script(s) required for the continuous chat server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
 
+If you want the most stable files, use a versioned directory. It's best to use only scripts from the same version to be safe. 
+
 You can run the python script directly in a terminal for debugging client interactions. STDERR is logged via python.  
 <br />
 <br />
