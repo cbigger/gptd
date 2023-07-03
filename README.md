@@ -52,7 +52,7 @@ Run the server:
 Run the client:
 `python src/gptd-uds-client.py`
 <br />
->br />
+<br />
 
 ### Install the gptd daemon from the .deb
 
