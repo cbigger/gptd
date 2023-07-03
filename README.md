@@ -27,7 +27,7 @@ Please note that this software **requires pydantic version 1.10.7**.
 <br />
 <br />
 <br />
-### Install the basic python console server
+### Run the basic python console server
 
 Clone this repository to your local machine:
 
@@ -97,17 +97,16 @@ You can also create your own unit and configuration files manually. Follow the p
 <br />
 ## Interacting with the server
 
-It's a simple TCP/IP server. You can open a connection with any console data client. Like netcat! 
-Open up a secondary terminal (or emulator window) and type
+It's a simple unix domain socket server. You send it stuff, it sends stuff back. You can connect to the gptd.sock programmatically, use the gptd-uds-client.py script, or install the client cli.
 
-`nc localhost 9999`
-
+To do the latter, navigate to src/client and type `pip install .` You should enter into a newline with a blinking cursor.
 Type something and hit enter to start chatting!
 
-gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to.
+gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to. I, and hopefully others, plan to release further software for AI integration that builds off gptd. Stay tuned!
 
 Features to come:\
+   v1 has a lot of QoL on the way, and further customization. v1.1 is likely to be DBus and desktop env integration
    Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do\
-   Broadcast channels, like an RRS feed but for llm activity\
-   Unix Domain Sockets implementation\
+   Broadcast channels, again DBus program interface
+   Unix Domain Sockets implementation  **DONE**\
    Distro-independent daemon install?\
