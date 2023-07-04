@@ -22,9 +22,9 @@ cat << EOF >  $CONFIGURATION_DIR/.env
 OPENAI_API_KEY=<api key here>
 
 # Flavour
-AI_TEXT_COLOUR='\033[34m\033[1m' # default cyan no background
-AI_NAME_COLOUR='\033[34m\033[1m\033[47m' # cyan with white background
-TEXT_RESET='\033[0m' # reset
+AI_TEXT_COLOUR='\033[34m\033[1m'
+AI_NAME_COLOUR='\033[34m\033[1m\033[47m'
+TEXT_RESET='\033[0m'
 EOF
 
 # Copy the .env to the simpleaichat directory
