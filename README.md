@@ -1,13 +1,17 @@
 # **gptd**
-### Overview
-A systemd daemonization of the cli implementation of https://github.com/minimaxir/simpleaichat and the openai API. 
 
-The current gptd_v1 opens a unix domain socker server which forwards all incoming data to a single continuous ChatGPT conversation, providing a shared context for system software. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb).
+### <u>Overview</u>
+#### A Systemd AI Daemon
+
+The current vesrions open a unix domain socket server which forwards all incoming data to a configured model, providing a shared context, continuous chat, or private context, or one-shot command line STDIN and STDOUT use. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb; huggingface integration coming soon!).
 
 There are currently two versions, v1.1 and v1.0. The former has done away with simpleaichat as a loadin/chat handler, and instead uses a tiny custom loader. The latter is kept for backwards compabitability and use with future simpleaichat development.
 
-This project includes the Python script(s) required for the continuous chat server, a systemd service file for running the service as a daemon on Debian-based Linux systems, a .deb, and standalone server and configuration files under gptd/src.
-
+This project repo includes:
+   - a .deb for easy install on debian-based systems
+   - an installable command-line client with various arguments
+   - python script(s) for the client and server for debugging and cli quick-use
+   - all the source code
 If you want the most stable files, use a versioned directory. It's best to use only scripts from the same version to be safe. 
 **THE FILEPATHS IN THESE INSTRUCTIONS USE GENERIC, NON-VERSIONED DIRECTORY NAMES. Edit as needed.**
 
@@ -100,11 +104,11 @@ You can also create your own unit and configuration files manually. Follow the p
 <br />
 <br />
 <br />
-## Interacting with the server
+### Interacting with the server
 
 It's a simple unix domain socket server. You send it stuff, it sends stuff back. You can connect to the gptd.sock programmatically, use the gptd-uds-client.py script, or install the client cli.
 
-To do the latter, navigate to src/client and type `pip install .` You should enter into a newline with a blinking cursor.
+To do the latter, navigate to src/client (or usr/local/lib/gpt.d/client if you are in a build directory) and type `pip install .` You should enter into a newline with a blinking cursor.
 Type something and hit enter to start chatting!
 
 gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to. I, and hopefully others, plan to release further software for AI integration that builds off gptd. Stay tuned!
