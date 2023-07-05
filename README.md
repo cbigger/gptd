@@ -113,7 +113,8 @@ Type something and hit enter to start chatting!
 
 gptd is meant to be used as a tool for further terminal and desktop environment features to hook on to. I, and hopefully others, plan to release further software for AI integration that builds off gptd. Stay tuned!
 
-Features to come:
+
+### Features to come:
 
    - v1 has a lot of QoL on the way, and further customization. v1.1 is likely to be DBus and desktop env integration
    - Other AI model platforms (especially local llms which accel at coding), either as simpleaichat develops or we do\
