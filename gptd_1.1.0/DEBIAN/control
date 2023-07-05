@@ -1,0 +1,9 @@
+Package: gptd
+Version: 1.1.0
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 2368
+Maintainer: <gptddev@gmail.com>
+Description: gptd is a unix domain socket server connecting to the openai api.
