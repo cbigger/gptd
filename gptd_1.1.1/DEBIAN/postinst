@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALL_DIR="/usr/local/bin/"
+INSTALL_DIR="/usr/local/bin"
 SERVICE_FILE="/lib/systemd/system/gptd.service"
 CONFIGURATION_DIR="/etc/gpt.d"
 
@@ -12,7 +12,7 @@ mkdir -p $CONFIGURATION_DIR
 # Copy the Python files to the installation directory
 
 cp -r usr/local/lib/gpt.d/gptd-uds.py $INSTALL_DIR
-chown $SUDO_USER:$SUDO_USER $$INSTALL_DIR/gptd-uds.py
+chown $SUDO_USER:$SUDO_USER $INSTALL_DIR/gptd-uds.py
 
 # Install the Python requirements
 pip install -r $INSTALL_DIR/requirements.txt
