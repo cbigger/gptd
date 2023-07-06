@@ -3,9 +3,11 @@
 ### <u>Overview</u>
 #### A Systemd AI Daemon
 
-The current vesrions open a unix domain socket server which forwards all incoming data to a configured model, providing a shared context, continuous chat, or private context, or one-shot command line STDIN and STDOUT use. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb; huggingface integration coming soon!).
+Chat anywhere in your linux, anytime.
 
-There are currently two versions, v1.1 and v1.0. The former has done away with simpleaichat as a loadin/chat handler, and instead uses a tiny custom loader. The latter is kept for backwards compabitability and use with future simpleaichat development.
+gptd opens a unix domain socket server which forwards all incoming data to a preconfigured model. Can be further configured with any OpenAI API available models (default: gpt-3.5-turb; huggingface integration coming soon!).
+
+There are currently two versions, v1.1 and v1.0. The former has done away with simpleaichat as a loadin/chat handler, and instead uses a tiny custom loader. The latter is kept for backwards compabitability and use with future simpleaichat development. v1.0 with simpleaichat has shared context and conversation history in the daemon. v1.1 is moving this to client apps. 
 
 This project repo includes:
    - a .deb for easy install on debian-based systems
