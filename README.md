@@ -38,8 +38,7 @@ Please note that this software **requires pydantic version 1.10.7**.
 <br />
 ### Run the basic python console server
 
-Clone this repository to your local machine:
-
+You *could* clone this bloaty, soon to be madeover repository to your local machine, but I recommend you head to the versions tab and download a source or .deb file for a release directly
 `git clone https://github.com/cbigger/gptd.git`
 
 `cd gptd/`
