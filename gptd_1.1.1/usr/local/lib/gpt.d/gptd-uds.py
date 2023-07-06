@@ -9,7 +9,6 @@ import logging
 import codecs
 import traceback
 from systemd import journal
-#from systemd.journal import JournalHandler
 
 logger = logging.getLogger(__name__)
 logger.addHandler(journal.JournalHandler(SYSLOG_IDENTIFIER='gptd-uds'))
@@ -17,6 +16,7 @@ logger.addHandler(journal.JournalHandler(SYSLOG_IDENTIFIER='gptd-uds'))
 config_file = "/etc/gpt.d/.env"
 if not os.path.exists(config_file):
     logger.error("Configuration file not found. Please update your configuration in /etc/gpt.d/gptd.conf")
+    print(f'Config not found at {config_file}')
     exit()
 
 load_dotenv(dotenv_path=config_file)

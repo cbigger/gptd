@@ -1,29 +1,34 @@
 #!/bin/bash
 
-INSTALL_DIR="/usr/local/bin"
+INSTALL_DIR="/home/$SUDO_USER/.local/share/gpt.d"
 SERVICE_FILE="/lib/systemd/system/gptd.service"
 CONFIGURATION_DIR="/etc/gpt.d"
 
+
+#sudo -u $SUDO_USER bash << EOF
 
 # Create the installation directories
 mkdir -p $INSTALL_DIR
 mkdir -p $CONFIGURATION_DIR
 
 # Copy the Python files to the installation directory
-
 cp -r usr/local/lib/gpt.d/gptd-uds.py $INSTALL_DIR
-chown $SUDO_USER:$SUDO_USER $INSTALL_DIR/gptd-uds.py
-
+cp -r usr/local/lib/gpt.d/requirements.txt $INSTALL_DIR
+chmod +x $INSTALL_DIR/gptd-uds.py
+python3 -m venv $INSTALL_DIR/gptdservice
 # Install the Python requirements
-pip install -r $INSTALL_DIR/requirements.txt
+$INSTALL_DIR/gptdservice/bin/python -m pip install -r $INSTALL_DIR/requirements.txt
+$INSTALL_DIR/gptdservice/bin/python -m pip install systemd-python
+
+#EOF
 
 
 # Create the configuration file
 cat << EOF >  $CONFIGURATION_DIR/.env
 # CONF
+CHAT_MODEL="gpt-3.5-turbo"
 # Security
 OPENAI_API_KEY=<api key here>
-
 # Flavour
 AI_TEXT_COLOUR='\033[34m\033[1m'
 AI_NAME_COLOUR='\033[34m\033[1m\033[47m'
@@ -36,10 +41,10 @@ cat << EOF > $SERVICE_FILE
 Description=gptd
 
 [Service]
-ExecStart=/gptd-uds.py
+ExecStart=$INSTALL_DIR/gptdservice/bin/python3 $INSTALL_DIR/gptd-uds.py
 User=$SUDO_USER
 Group=$(id -gn $SUDO_USER)
-EnvironmentFile=/etc/gpt.d/.env
+#Environment=PYTHONPATH=$INSTALL_DIR/gptdservice/bin/python
 Restart=no
 
 [Install]
