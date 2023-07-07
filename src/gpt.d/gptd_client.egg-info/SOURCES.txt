@@ -1,0 +1,8 @@
+setup.py
+gptd_client/__init__.py
+gptd_client/client.py
+gptd_client.egg-info/PKG-INFO
+gptd_client.egg-info/SOURCES.txt
+gptd_client.egg-info/dependency_links.txt
+gptd_client.egg-info/entry_points.txt
+gptd_client.egg-info/top_level.txt

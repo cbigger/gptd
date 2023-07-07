@@ -1,0 +1,2 @@
+[console_scripts]
+gptd-client = gptd_client.client:main
